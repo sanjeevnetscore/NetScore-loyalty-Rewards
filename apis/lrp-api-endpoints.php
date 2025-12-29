@@ -65,7 +65,7 @@ class LRP_API_Endpoints {
             return true;
         }
 
-        return new WP_Error( 'rest_forbidden', __( 'You are not authorized to use this API.', 'NetScore Loyalty Rewards' ), array( 'status' => 401 ) );
+        return new WP_Error( 'rest_forbidden', __( 'You are not authorized to use this API.', 'netscore-loyalty-rewards' ), array( 'status' => 401 ) );
     }
 
     /**
