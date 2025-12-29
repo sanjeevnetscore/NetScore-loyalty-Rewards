@@ -1,9 +1,10 @@
-=== Loyalty Rewards Plugin ===
-Contributors: Your Name
-Tags: loyalty, rewards, woocommerce, points
+=== NetScore Loyalty Rewards ===
+Contributors: netscoretechnologies2011
+Tags: loyalty, rewards, points, customer-retention, woocommerce
 Requires at least: 5.0
 Tested up to: 6.6
-Stable tag: 1.0
+Requires PHP: 7.2
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -19,4 +20,5 @@ This plugin allows you to set up a loyalty rewards system for your WooCommerce s
 
 == Changelog ==
 = 1.0 =
+
 * Initial release.
