@@ -909,7 +909,7 @@ public function handle_loyalty_customer_export() {
 
     $output = fopen( 'php://output', 'w' );
     if ( $output === false ) {
-        wp_die( esc_html__( 'Unable to open output stream for CSV.', 'NetScore Loyalty Rewards' ) );
+        wp_die( esc_html__( 'Unable to open output stream for CSV.', 'netscore-loyalty-rewards' ) );
     }
 
     // CSV header (added "Is Eligible" and "Loyalty Eligible Date")
@@ -2630,7 +2630,7 @@ if ( isset( $_POST['each_point_value'] ) ) {
     public function add_loyalty_product_tab($tabs) {
     // Always show the loyalty product tab, but if expired, only show message in content
     $tabs['lrp_loyalty'] = array(
-        'label' => __('NetScore Loyalty Rewards', 'NetScore Loyalty Rewards'),
+        'label' => __('NetScore Loyalty Rewards', 'netscore-loyalty-rewards'),
         'target' => 'lrp_loyalty_product_data',
         'priority' => 25,
     );
@@ -2671,7 +2671,7 @@ if ( isset( $_POST['each_point_value'] ) ) {
                 // Render checkboxes with the correct initial state (no postmeta involved)
                 woocommerce_wp_checkbox(array(
                     'id'    => '_lrp_enable_loyalty',
-                    'label' => __('Enable Loyalty Rewards for this product', 'NetScore Loyalty Rewards'),
+                    'label' => __('Enable Loyalty Rewards for this product', 'netscore-loyalty-rewards'),
                     'value' => $enable_loyalty ? 'yes' : 'no',
                     'cbvalue' => 'yes',
                 ));
@@ -2681,7 +2681,7 @@ if ( isset( $_POST['each_point_value'] ) ) {
                     <?php
                     woocommerce_wp_checkbox(array(
                         'id'    => '_lrp_enable_collection',
-                        'label' => __('Enable Collection Type', 'NetScore Loyalty Rewards'),
+                        'label' => __('Enable Collection Type', 'netscore-loyalty-rewards'),
                         'value' => $enable_collection ? 'yes' : 'no',
                         'cbvalue' => 'yes',
                     ));
@@ -2690,7 +2690,7 @@ if ( isset( $_POST['each_point_value'] ) ) {
 
                 <div id="lrp_collection_wrapper" style="margin-top:10px; display: <?php echo $enable_collection ? 'block' : 'none'; ?>;">
                     <p class="form-field">
-                        <label for="_lrp_collection_type"><?php esc_html_e('Collection Type', 'NetScore Loyalty Rewards'); ?></label>
+                        <label for="_lrp_collection_type"><?php esc_html_e('Collection Type', 'netscore-loyalty-rewards'); ?></label>
                         <select id="_lrp_collection_type" name="_lrp_collection_type">
                             <option value="points" <?php selected($collection_type, 'points'); ?>>Points Based</option>
                             <option value="amount" <?php selected($collection_type, 'amount'); ?>>Amount Based</option>
@@ -2700,7 +2700,7 @@ if ( isset( $_POST['each_point_value'] ) ) {
 
                 <div id="lrp_points_based_wrapper" style="display: <?php echo ($enable_collection && $collection_type === 'points') ? 'block' : 'none'; ?>;">
                     <p class="form-field">
-                        <label for="_lrp_points_value"><?php esc_html_e('Points Value', 'NetScore Loyalty Rewards'); ?></label>
+                        <label for="_lrp_points_value"><?php esc_html_e('Points Value', 'netscore-loyalty-rewards'); ?></label>
                         <input type="number" id="_lrp_points_value" name="_lrp_points_value" value="<?php echo esc_attr($points_value); ?>" min="0" step="0.01">
                         <span class="description">Enter points to display in front-end (manual override).</span>
                     </p>
@@ -2708,7 +2708,7 @@ if ( isset( $_POST['each_point_value'] ) ) {
 
                 <div id="lrp_amount_based_wrapper" style="display: <?php echo ($enable_collection && $collection_type === 'amount') ? 'block' : 'none'; ?>;">
                     <p class="form-field">
-                        <label for="_lrp_sku_multiplier"><?php esc_html_e('SKU Multiplier', 'NetScore Loyalty Rewards'); ?></label>
+                        <label for="_lrp_sku_multiplier"><?php esc_html_e('SKU Multiplier', 'netscore-loyalty-rewards'); ?></label>
                         <input type="number" id="_lrp_sku_multiplier" name="_lrp_sku_multiplier" value="<?php echo esc_attr($sku_multiplier); ?>" step="0.01" min="0">
                         <span class="description">Multiplier used in amount-based calculation.</span>
                     </p>
