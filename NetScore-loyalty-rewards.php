@@ -1,13 +1,14 @@
 <?php
 /*
 Plugin Name: NetScore Loyalty Rewards
-Plugin URI:  https://wooloayalty.netscoreapps.com/
-Description: A plugin to manage loyalty points for WooCommerce.
-Version:     1.0
+Plugin URI:  https://wooloyalty.netscoreapps.com/
+Description: A powerful loyalty rewards plugin for WooCommerce that helps businesses increase customer retention by earning and redeeming points seamlessly across online and checkout experiences.
+Version:     1.0.0
 Author:      NetScore Technologies
-Author URI:  https://wooloayalty.netscoreapps.com/
-Text Domain: NetScore Loyalty Rewards
+Author URI:  https://wooloyalty.netscoreapps.com/
+Text Domain: netscore-loyalty-rewards
 License:     GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 
 if ( ! defined( 'ABSPATH' ) ) {
