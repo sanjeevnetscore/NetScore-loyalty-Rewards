@@ -1,0 +1,30 @@
+<?php
+// includes/events.php
+// Returns an array of canonical event_id => event_label
+return [
+    1  => 'Points Earned On Purchase',
+    2  => 'Gift Certificate Generated - Web',
+    3  => 'Points Deducted on Return of Products',
+    4  => 'Gift Certificate Generated - Manual',
+    5  => 'Points Earned on Referred Friend Sign up',
+    6  => 'Points Earned on Signup',
+    7  => 'Product Earned on Sharing a Product on Facebook',
+    8  => 'Points Earned on Product Review',
+    9  => 'Points Earned on Birthday',
+    10 => 'Points Earned on Anniversary',
+    11 => 'Product Shared on Instagram',
+    12 => 'Followed Our page on Instagram',
+    13 => 'Points Earned on Referral Code Used',
+    14 => 'Points Earned on Sharing a Product by Email',
+    15 => 'Points Earned By Subscribing to Newsletter',
+    16 => 'Points Redeemed towards Purchase',
+    17 => 'Points Expired',
+    18 => 'Points Adjusted Manually',
+    19 => 'Points Credited When So Closed',
+    20 => 'Points Credited Back when items are Returned',
+    21 => 'Points Redeemed By Purchasing Product',
+    22 => 'Points Earned On Transaction Amount',
+    23 => 'Points Reset',
+    24 => 'Gift Certificate Generated - Auto',
+    25 => 'PromoCode Generate',
+];

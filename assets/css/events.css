@@ -1,0 +1,153 @@
+/* Modern Events UI - events.css */
+
+/* Page background */
+.lrp-events-wrap {
+  padding: 22px;
+  background: #f0f0f1;
+  min-height: 420px;
+}
+
+/* Title + button */
+.lrp-events-wrap .wp-heading-inline { font-size: 28px; font-weight: 700; margin-right: 10px; }
+.page-title-action.lrp-add-event {
+  background: #0073aa;
+  color: #fff !important;
+  border: 0;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(30,115,190,0.12);
+}
+.page-title-action.lrp-add-event:hover { background:#155ea8; }
+
+/* Action bar */
+.lrp-actions { margin-top: 16px; margin-bottom: 8px; }
+.lrp-actions .button { border-radius: 8px; }
+
+/* Search input */
+.lrp-actions form input.regular-text { width: 280px; padding: 8px 10px; border-radius: 6px; border: 1px solid #d1d7dd; }
+
+/* Table: spacing, rounded rows, shadow */
+.lrp-events-table {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0 10px !important; /* vertical space between rows */
+}
+.lrp-events-table thead th {
+  padding: 10px 20px;
+  color: #5b6b73;
+  font-weight: 600;
+  background: transparent;
+  border-bottom: none;
+  
+}
+.lrp-events-table tbody tr {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(20,30,40,0.04);
+  transition: background .18s, transform .06s;
+  overflow: hidden;
+}
+.lrp-events-table tbody tr:hover { transform: translateY(-1px); }
+
+/* cells */
+.lrp-events-table tbody tr td { padding: 5px 22px !important; vertical-align: middle; border-top: none !important;  }
+
+/* selected row */
+.lrp-events-table tbody tr.selected-row { background: #2b6fb4 !important; color: #fff; }
+.lrp-events-table tbody tr.selected-row td { color: #fff !important; }
+.lrp-events-table tbody tr.selected-row .dashicons { color: #fff !important; }
+
+/* Action buttons */
+.lrp-events-table .button { padding: 6px 8px; border-radius: 8px; border: 1px solid #1e73be; color: #0073aa; border: 1px solid #ffffff !important; }
+.lrp-events-table .button:hover { background: #1e73be; color:#fff; }
+
+/* Toggle switch - clean hidden checkbox implementation */
+.lrp-switch { display:inline-block; position:relative; width:48px; height:24px; vertical-align:middle; }
+.lrp-switch input { display: none; } /* <- ensure hidden */
+.lrp-slider {
+  position:absolute; inset:0; background:#e6e9ec; border-radius:34px; transition: background .18s;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.06);
+}
+.lrp-slider:before {
+  content:""; position:absolute; top:3px; left:3px; width:18px; height:18px; background:#fff; border-radius:50%;
+  transition: transform .18s, box-shadow .18s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+.lrp-switch input:checked + .lrp-slider { background: #28c76f; }
+.lrp-switch input:checked + .lrp-slider:before { transform: translateX(22px); }
+
+/* modal base (simple centered box) */
+#lrp-event-modal {
+  position: fixed;
+  z-index: 99999;
+  left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  background: #fff;
+  width: 640px;
+  max-width: 94%;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(20,30,40,0.28);
+  display: none;
+}
+#lrp-event-modal .form-table td { padding: 8px 6px; }
+
+/* modal overlay */
+.lrp-modal-overlay {
+  position: fixed; inset:0; background: rgba(0,0,0,0.32); z-index: 99998; display: none;
+}
+
+/* pagination look */
+.tablenav-pages .page-numbers { padding:6px 10px; border-radius:20px; margin:0 2px; border:1px solid #e6ebf0; color:#59666f; }
+.tablenav-pages .current { background:#1e73be; color:#fff; border-color:#1e73be; }
+
+/* responsive small fixes */
+@media (max-width: 900px) {
+  .lrp-actions form input.regular-text { width: 160px; }
+  #lrp-event-modal { width: 92%; padding:12px; }
+}
+
+
+
+
+/* ==========================
+   Gift Cards UI Styling
+   ========================== */
+
+.lrp-table-card {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.lrp-ui-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 8px;
+}
+
+.lrp-ui-table thead th {
+    background: #f3f4f7;
+    color: #222;
+    font-weight: 600;
+    padding: 12px;
+    border-bottom: 2px solid #e3e3e3;
+}
+
+.lrp-ui-table tbody tr {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.lrp-ui-table tbody tr td {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.lrp-ui-table tbody tr:hover {
+    background: #f8faff;
+}

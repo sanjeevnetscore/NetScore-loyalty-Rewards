@@ -1,0 +1,702 @@
+/* General */
+.lrp-rewards-badge {
+    display: inline-flex;
+    gap: 0px;
+    padding: 4px 3px;
+    background-color: #13b05c;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    height: 55px;
+    width: 55px;
+    margin-bottom: 5px;
+}
+
+
+
+.lrp-checkout-rewards {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.lrp-checkout-rewards h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.lrp-points-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.lrp-points-line span {
+    margin-right: 10px;
+}
+
+.lrp-points-circle {
+    /* display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #28a745; */
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    
+}
+.lrp-points-label{
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+}
+.lrp-points-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.lrp-points-input label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.lrp-points-input input {
+    width: 100px;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.lrp-points-input button {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.lrp-points-input #remove_points {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+.lrp-available-points {
+    margin: 5px 0;
+    color: #555;
+}
+
+.lrp-message, .lrp-error {
+    color: #dc3545;
+    margin-top: 5px;
+}
+
+.lrp-success {
+    color: #28a745;
+}
+
+/* Points Summary */
+.lrp-points-summary {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.lrp-points-summary div {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.lrp-points-summary div:first-child {
+    background: #ff6200;
+    color: #fff;
+}
+
+.lrp-points-summary div:nth-child(2) {
+    background: #d3d3d3;
+    color: #333;
+}
+
+.lrp-points-summary div:last-child {
+    background: #003087;
+    color: #fff;
+}
+
+.lrp-points-summary strong {
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.lrp-points-summary span {
+    font-size: 14px;
+}
+
+/* Tables */
+.lrp-table-container {
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.lrp-table-container table, .lrp-redeem-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lrp-table-container th, .lrp-redeem-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #343a40;
+    background: #f8f9fa;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.lrp-table-container td, .lrp-redeem-table td {
+    padding: 15px;
+    color: #495057;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.lrp-table-container tr, .lrp-redeem-table tr {
+    transition: background 0.2s;
+}
+
+.lrp-table-container tr:hover, .lrp-redeem-table tr:hover {
+    background: #f8f9fa;
+}
+
+/* Pagination */
+.lrp-pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lrp-pagination ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lrp-pagination a {
+    padding: 8px 12px;
+    background: #e9ecef;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.lrp-pagination a.active {
+    background: #005d87;
+    color: #fff;
+    font-weight: 600;
+}
+
+.lrp-pagination a:not(.active):hover {
+    background: #007bff;
+    color: #fff;
+}
+
+/* Refer and Earn */
+.lrp-refer-friend {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f8f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.lrp-refer-friend img {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.lrp-refer-friend p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.lrp-refer-friend p strong {
+    color: #005d87;
+}
+
+.lrp-referral-code {
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.lrp-refer-friend input {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.lrp-refer-friend button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.lrp-refer-friend button:hover {
+    background-color: #218838;
+}
+
+/* Gift Card */
+.lrp-gift-card {
+    max-width: 580px;
+    margin: 40px auto;
+    padding: 32px;
+    border: 2px solid #dc3545;
+    border-radius: 12px;
+    background: #fff;
+}
+
+.lrp-gift-card h2 {
+    color: #dc3545;
+    font-size: 28px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.lrp-gift-card > div {
+    border: 1.5px solid #dc3545;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lrp-gift-card input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.lrp-gift-card #redeemAmountDisplay {
+    margin-bottom: 10px;
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.lrp-gift-card button {
+    width: 100%;
+    background: #dc3545;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.lrp-gift-card button:hover {
+    background: #c82333;
+}
+
+/* Loyalty Tiers */
+.lrp-loyalty-tiers {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.lrp-loyalty-tiers h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.lrp-tier-summary h3 {
+    color: #005d87;
+    font-size: 20px;
+}
+
+.lrp-tier-summary p {
+    color: #555;
+}
+
+.lrp-tier-progress {
+    margin-bottom: 20px;
+}
+
+.lrp-tier-progress h4 {
+    color: #333;
+    font-size: 18px;
+}
+
+.lrp-progress-bar {
+    background: #e9ecef;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lrp-progress-bar div {
+    background: #28a745;
+    height: 100%;
+    transition: width 0.3s;
+}
+
+.lrp-tiers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.lrp-tiers-list div {
+    flex: 1;
+    min-width: 200px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.lrp-tiers-list div.active {
+    background: #d4edda;
+}
+
+.lrp-tiers-list strong {
+    font-size: 16px;
+    color: #333;
+}
+
+.lrp-tiers-list p {
+    color: #555;
+    font-size: 14px;
+}
+
+/* Update Profile */
+#update-profile-form input[readonly] {
+    background: #eee;
+    cursor: not-allowed;
+}
+
+#update-profile-form small {
+    color: #666;
+}
+
+
+/* Existing styles */
+.lrp-rewards-badge-div {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.lrp-points-label {
+    font-size: 14px;
+    color: #fff;
+}
+.lrp-checkout-rewards {
+    margin: 20px 0;
+}
+.lrp-points-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.lrp-points-input {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.lrp-available-points {
+    margin-top: 10px;
+}
+.lrp-points-summary {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.lrp-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.lrp-table-container th, .lrp-table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.lrp-pagination ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+.lrp-pagination li {
+    margin: 0 5px;
+}
+.lrp-pagination a {
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    color: #0073aa;
+}
+.lrp-pagination a.active {
+    background: #0073aa;
+    color: #fff;
+}
+.lrp-refer-friend {
+    margin: 20px 0;
+}
+.lrp-referral-code {
+    font-weight: bold;
+    color: #0073aa;
+}
+.lrp-gift-card {
+    margin: 20px 0;
+}
+.lrp-loyalty-tiers {
+    margin: 20px 0;
+}
+.lrp-tier-summary {
+    margin-bottom: 20px;
+}
+.lrp-progress-bar {
+    background: #f0f0f0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.lrp-progress-bar div {
+    background: #0073aa;
+    height: 100%;
+}
+.lrp-tiers-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.lrp-tiers-list div {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    flex: 1 1 300px;
+}
+.lrp-tiers-list .active {
+    background: #e6f3ff;
+    border: 1px solid #0073aa;
+}
+
+/* New styles for dropdown */
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+.lrp-sub-menu {
+    display: none;
+    padding-left: 20px;
+    background: #f9f9f9;
+    border-left: 2px solid #0073aa;
+}
+.lrp-sub-menu.active {
+    display: block;
+}
+.lrp-sub-menu li {
+    margin: 5px 0;
+}
+.lrp-sub-menu a {
+    text-decoration: none;
+    color: #333;
+}
+.lrp-sub-menu a:hover {
+    color: #0073aa;
+}
+.woocommerce-MyAccount-navigation-link--loyalty-rewards-information a {
+    cursor: pointer;
+}
+.woocommerce-MyAccount-navigation-link--loyalty-rewards-information a::after {
+    content: '\25BC';
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+.woocommerce-MyAccount-navigation-link--loyalty-rewards-information.active a::after {
+    transform: rotate(180deg);
+}
+
+.lrp-checkout-rewards {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.lrp-checkout-rewards h3 {
+    margin-top: 0;
+    color: #333;
+}
+.lrp-points-input label {
+    display: block;
+    margin-bottom: 10px;
+}
+.lrp-points-input input[type="number"] {
+    width: 100px;
+    padding: 5px;
+    margin-right: 10px;
+}
+.button.apply-button {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.button.remove-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.button.apply-button:hover, .button.remove-button:hover {
+    opacity: 0.9;
+}
+
+.lrp-points-input-div {
+   /* margin: 15px 0;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9; */
+    font-family: Arial, sans-serif;
+}
+
+.lrp-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.lrp-row label {
+    margin-right: 8px;
+    font-weight: 500;
+}
+
+.lrp-row input[type="number"] {
+    width: 100px;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.lrp-info {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.lrp-buttons {
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.lrp-buttons button {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#apply_points {
+    background: #0073aa;
+    color: #fff;
+}
+
+#apply_points:disabled {
+    background: #4dba5ce8;
+    cursor: not-allowed;
+}
+
+#remove_points {
+    background: #d63638;
+    color: #fff;
+}
+.lrp-social-share a.lrp-share-btn {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.lrp-share-facebook {
+    background-color: #3b5998;
+}
+.lrp-share-facebook:hover {
+    background-color: #2a4373;
+}
+.lrp-share-email {
+    background-color: #666;
+}
+.lrp-share-email:hover {
+    background-color: #555;
+}
+#lrp-fullscreen-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lrp-spinner {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #ddd;
+    border-top: 6px solid #0073aa;
+    border-radius: 50%;
+    animation: lrp-spin 1s linear infinite;
+}
+
+@keyframes lrp-spin {
+    to { transform: rotate(360deg); }
+}

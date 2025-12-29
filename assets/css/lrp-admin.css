@@ -1,0 +1,327 @@
+.lrp-admin-container {
+    max-width: 1200px !important;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    background: #fff; /* Unified background */
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 15px;
+}
+
+.lrp-nav-tabs {
+    display: flex;
+    flex-direction: column !important;
+    width: 200px;
+    border-right: 1px solid #e1e1e1; /* Vertical separator */
+    padding-right: 10px;
+}
+
+.lrp-tab {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #23282d;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.lrp-tab.active,
+.lrp-tab:hover {
+    background: #0073aa;
+    color: #fff;
+}
+
+.lrp-tab-content {
+    flex: 1;
+    padding-left: 10px;
+}
+
+.lrp-tab-pane {
+    display: none;
+    padding: 15px 0;
+}
+
+.lrp-tab-pane.active {
+    display: block;
+}
+
+.lrp-card {
+    margin-bottom: 20px;
+}
+
+.lrp-card h2 {
+    background: #f8f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #e1e1e1;
+    border-radius: 4px 4px 0 0;
+    margin: -15px -15px 15px -10px; /* Adjusted to align with container padding */
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.form-table th {
+    width: 30%;
+    font-weight: 600;
+    color: #23282d;
+    padding: 15px;
+}
+
+.form-table td {
+    padding: 15px;
+}
+
+.form-table td input[type="number"] {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.form-table td input[type="number"]:focus {
+    border-color: #0073aa;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,115,170,0.2);
+}
+
+
+.form-table td input[type="text"] {
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 8px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.form-table td input[type="text"]:focus {
+    border-color: #0073aa;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0,115,170,0.2);
+}
+
+
+
+.form-table td .description {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.lrp-product-field {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    background: #f8f9f9;
+}
+
+@media (max-width: 782px) {
+    .lrp-admin-container {
+        flex-direction: column;
+    }
+
+    .lrp-nav-tabs {
+        flex-direction: row;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e1e1e1;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .lrp-tab {
+        margin-bottom: 0;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .lrp-tab-content {
+        padding-left: 0;
+    }
+
+    .form-table th,
+    .form-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .form-table th {
+        margin-bottom: 5px;
+    }
+}
+
+/* Highlight styles for Days to License Expiration */
+.lrp-license-expiration {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%); /* Soft white-to-blue gradient */
+    border: 2px solid #91c5b5; /* WordPress blue border */
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lrp-license-expiration:hover {
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.lrp-license-expiration h2 {
+    font-size: 1.3em;
+    margin: 0 0 8px 0;
+    color: #1a202c; /* Dark gray for header */
+    font-weight: 600;
+}
+
+.lrp-license-expiration p {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Conditional styling based on license status */
+.lrp-license-expiration.expired {
+    background: linear-gradient(135deg, #fee2e2 0%, #fed7d7 100%); /* Light red gradient */
+    border-color: #b91c1c; /* Darker red border */
+}
+
+.lrp-license-expiration.expired p {
+    color: #b91c1c; /* Dark red text */
+    font-weight: bold;
+}
+
+.lrp-license-expiration.unknown {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); /* Light yellow gradient */
+    border-color: #d97706; /* Amber border */
+}
+
+.lrp-license-expiration.unknown p {
+    color: #d97706; /* Amber text */
+}
+
+.lrp-license-expiration.valid {
+    background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); /* Light green gradient */
+    border-color:#91c5b5; /* Green border */
+}
+
+.lrp-license-expiration.valid p {
+    color: #059669; /* Green text */
+}
+
+/* Ensure consistency with form-table */
+.lrp-user-details .form-table .lrp-license-expiration {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Existing styles for .lrp-user-details to ensure compatibility */
+.lrp-user-details .form-table {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.lrp-user-details .form-table th {
+    width: 30%;
+    vertical-align: top;
+}
+
+.lrp-user-details .form-table td {
+    vertical-align: top;
+    padding: 10px;
+}
+
+.toggle-visibility {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.toggle-visibility:hover {
+    color: #0073aa;
+}
+
+.lrp-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.lrp-checkbox {
+    margin: 0;
+    vertical-align: middle;
+}
+
+.form-table th,
+.form-table td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+.form-table td input[type="text"],
+.form-table td input[type="number"] {
+    width: 100%;
+    max-width: 200px;
+}
+
+.form-table td input[type="text"] {
+    width: 100%;
+    max-width: 200px;
+}
+
+.wp-list-table.widefat th,
+.wp-list-table.widefat td {
+    text-align: -webkit-center !important;
+    padding: 8px;
+}
+
+.wp-list-table.widefat td input[type="text"],
+.wp-list-table.widefat td input[type="number"] {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+        .lrp-freeze-overlay {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255,255,255,0.85);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: all;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+        }
+        .lrp-freeze-cloud {
+            text-align: center;
+            color: #888;
+            font-size: 1.3em;
+            background: rgba(255,255,255,0.95);
+            border-radius: 12px;
+            padding: 32px 40px;
+            /* box-shadow: 0 2px 16px rgba(0,0,0,0.08); */
+        }
+        .lrp-freeze-cloud i.fas.fa-cloud {
+            font-size: 3em;
+            margin-bottom: 12px;
+            color: #b0b0b0;
+        }
+        .lrp-tab-pane input[disabled], .lrp-tab-pane select[disabled], .lrp-tab-pane button[disabled] {
+            background: #f5f5f5 !important;
+            color: #aaa !important;
+            cursor: not-allowed !important;
+        }
+                                .lrp-input { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
+                                .lrp-checkbox { margin: 0; vertical-align: middle; }
+                                .form-table th, .form-table td { padding: 10px; vertical-align: top; }
+                                .form-table td input[type="text"], .form-table td input[type="number"] { width: 100%; max-width: 200px; }
+                                .wp-list-table.widefat th, .wp-list-table.widefat td { text-align: left; padding: 8px; }
+                                .wp-list-table.widefat td input[type="text"], .wp-list-table.widefat td input[type="number"] { width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 4px; }
