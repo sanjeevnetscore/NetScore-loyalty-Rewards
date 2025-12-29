@@ -2,7 +2,7 @@
 /*
 Plugin Name: NetScore Loyalty Rewards
 Plugin URI:  https://wooloyalty.netscoreapps.com/
-Description: A powerful loyalty rewards plugin for WooCommerce that helps businesses increase customer retention by earning and redeeming points seamlessly across online and checkout experiences.
+Description: A powerful loyalty rewards plugin for WooCommerce that helps businesses increase customer retention by allowing customers to earn and redeem points seamlessly during checkout.
 Version:     1.0.0
 Author:      netscoretechnologies2011 
 Text Domain: netscore-loyalty-rewards
