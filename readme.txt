@@ -19,6 +19,7 @@ This plugin allows you to set up a loyalty rewards system for your WooCommerce s
 3. Configure the settings under the Loyalty Rewards menu in the WordPress admin panel.
 
 == Changelog ==
-= 1.0 =
+= 1.0.0 =
 
 * Initial release.
+
