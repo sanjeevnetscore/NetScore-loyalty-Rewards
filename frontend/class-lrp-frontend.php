@@ -58,7 +58,7 @@ add_action( 'woocommerce_created_customer', array( $this, 'award_referral_points
             }
             $discount = WC()->session->get('lrp_applied_discount', 0);
             if ($discount > 0) {
-                $cart->add_fee(__('Loyalty Points Discount', 'NetScore Loyalty Rewards'), -$discount);
+                $cart->add_fee(__('Loyalty Points Discount', 'netscore-loyalty-rewards'), -$discount);
             }
         });
     }
@@ -397,7 +397,7 @@ public function display_loyalty_points() {
                 <span class="lrp-points-circle"><?php echo esc_html( $points ); ?></span>
                 <span class="lrp-points-label">PTS</span>
             </div>
-            <div><p><?php /* translators: %d: number of loyalty points */ echo esc_html( sprintf( __( 'Earn %d points with this purchase', 'NetScore Loyalty Rewards' ), (int) $points ) ); ?></p></div>
+            <div><p><?php /* translators: %d: number of loyalty points */ echo esc_html( sprintf( __( 'Earn %d points with this purchase', 'netscore-loyalty-rewards' ), (int) $points ) ); ?></p></div>
 
         </div>
         <?php
@@ -415,7 +415,7 @@ public function display_loyalty_points() {
                 <span class="lrp-points-circle"><?php echo esc_html( $points ); ?></span>
                 <span class="lrp-points-label">PTS</span>
             </div>
-			<div><p><?php /* translators: %d: number of loyalty points */ echo esc_html( sprintf( __( 'Earn %d points with this purchase', 'NetScore Loyalty Rewards' ), (int) $points ) ); ?></p></div>
+			<div><p><?php /* translators: %d: number of loyalty points */ echo esc_html( sprintf( __( 'Earn %d points with this purchase', 'netscore-loyalty-rewards' ), (int) $points ) ); ?></p></div>
         </div>
         <?php
         return;
@@ -439,11 +439,11 @@ public function display_loyalty_points() {
         <div class="lrp-rewards-badge-div" style="margin-bottom:20px;display:flex;align-items:center;gap:10px;">
             <div class="lrp-rewards-badge" aria-hidden="true">
                 <span class="lrp-points-circle"><?php echo esc_html( $points ); ?></span>
-                <span class="lrp-points-label"><?php echo esc_html__( 'PTS', 'NetScore Loyalty Rewards' ); ?></span>
+                <span class="lrp-points-label"><?php echo esc_html__( 'PTS', 'netscore-loyalty-rewards' ); ?></span>
             </div>
 
             <div>
-                <p><?php /* translators: %d: number of loyalty points */ echo esc_html( sprintf( __( 'Earn %d points on this purchase', 'NetScore Loyalty Rewards' ), (int) $points )); ?></p>
+                <p><?php /* translators: %d: number of loyalty points */ echo esc_html( sprintf( __( 'Earn %d points on this purchase', 'netscore-loyalty-rewards' ), (int) $points )); ?></p>
             </div>
         </div>
         <?php
@@ -460,8 +460,8 @@ public function display_loyalty_points() {
         $login_url = wc_get_page_permalink( 'myaccount' );
         ?>
         <div class="lrp-checkout-rewards lrp-login-prompt" style="border:1px solid #e2e2e2;padding:12px;margin-bottom:16px;background:#fafafa;">
-            <h3><?php esc_html_e( 'Loyalty Rewards', 'NetScore Loyalty Rewards' ); ?></h3>
-            <p><?php printf( wp_kses_post( /* translators: %s: login url */ __( 'Please <a href="%s">log in</a> to view and redeem your loyalty points at checkout.', 'NetScore Loyalty Rewards' ) ), esc_url( $login_url ) ); ?></p>
+            <h3><?php esc_html_e( 'Loyalty Rewards', 'netscore-loyalty-rewards' ); ?></h3>
+            <p><?php printf( wp_kses_post( /* translators: %s: login url */ __( 'Please <a href="%s">log in</a> to view and redeem your loyalty points at checkout.', 'netscore-loyalty-rewards' ) ), esc_url( $login_url ) ); ?></p>
         </div>
         <?php
         return;
@@ -473,10 +473,10 @@ public function display_loyalty_points() {
     if ( ! LRP_Utils::is_loyalty_eligible_customer() ) {
         ?>
         <div class="lrp-checkout-rewards" style="padding:12px;border:1px solid #e2e2e2;background:#fafafa;">
-            <h3><?php esc_html_e( 'Loyalty Rewards', 'NetScore Loyalty Rewards' ); ?></h3>
+            <h3><?php esc_html_e( 'Loyalty Rewards', 'netscore-loyalty-rewards' ); ?></h3>
             <p><?php esc_html_e(
                 'Your account is not eligible for the loyalty program.',
-                'NetScore Loyalty Rewards'
+                'netscore-loyalty-rewards'
             ); ?></p>
         </div>
         <?php
@@ -1948,22 +1948,22 @@ public function refer_friend_callback() {
     // Build email
     $site_name = get_option( 'blogname', 'Your Site' );
     $admin_email = get_option( 'admin_email', 'no-reply@' . wp_parse_url( home_url(), PHP_URL_HOST ) );
-    $subject = sprintf( /* translators: %s: site name */ __( "You've Been Referred to %s!", 'NetScore Loyalty Rewards' ), $site_name );
+    $subject = sprintf( /* translators: %s: site name */ __( "You've Been Referred to %s!", 'netscore-loyalty-rewards' ), $site_name );
 
     $signup_url = wc_get_page_permalink( 'myaccount' );
     if ( ! $signup_url ) $signup_url = wp_registration_url();
     $signup_url = add_query_arg( 'ref', rawurlencode( $referral_code ), $signup_url );
 
     $message = '<html><body>';
-	$message .= '<h2>' . sprintf( /* translators: %s: site name */ __( "You've Been Referred to %s!", 'NetScore Loyalty Rewards' ), esc_html( $site_name ) ) . '</h2>';
+	$message .= '<h2>' . sprintf( /* translators: %s: site name */ __( "You've Been Referred to %s!", 'netscore-loyalty-rewards' ), esc_html( $site_name ) ) . '</h2>';
 	$message .= '<p>' . sprintf(
     /* translators: %s: site name */
-    __( 'Your friend has invited you to join %s! Sign up using the referral code below to earn rewards.', 'NetScore Loyalty Rewards' ),
+    __( 'Your friend has invited you to join %s! Sign up using the referral code below to earn rewards.', 'netscore-loyalty-rewards' ),
     esc_html( $site_name )
 ) . '</p>';
     $message .= '<p><strong>' . esc_html( $referral_code ) . '</strong></p>';
-    $message .= '<p><a href="' . esc_url( $signup_url ) . '">' . esc_html__( 'Sign up here', 'NetScore Loyalty Rewards' ) . '</a></p>';
-	$message .= '<p>' . sprintf( /* translators: %s: site name */ __( 'Thank you,<br>%s Team', 'NetScore Loyalty Rewards' ), esc_html( $site_name ) ) . '</p>';
+    $message .= '<p><a href="' . esc_url( $signup_url ) . '">' . esc_html__( 'Sign up here', 'netscore-loyalty-rewards' ) . '</a></p>';
+	$message .= '<p>' . sprintf( /* translators: %s: site name */ __( 'Thank you,<br>%s Team', 'netscore-loyalty-rewards' ), esc_html( $site_name ) ) . '</p>';
     $message .= '</body></html>';
 
     $headers = [
