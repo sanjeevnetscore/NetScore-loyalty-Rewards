@@ -157,7 +157,7 @@ private function is_netsuite_customer() {
             'ajax_action_delete' => 'lrp_delete_event',
             'ajax_action_toggle' => 'lrp_toggle_event_active',
             'ajax_action_export' => 'lrp_export_events_csv',
-            'confirm_delete' => __('Are you sure you want to delete this event?', 'NetScore Loyalty Rewards'),
+            'confirm_delete' => __('Are you sure you want to delete this event?', 'netscore-loyalty-rewards'),
         ]);
     }
 
@@ -229,10 +229,10 @@ if ( function_exists( 'lrp_is_netsuite_customer' ) ) {
         // Output page
         ?>
         <div class="wrap lrp-events-wrap">
-            <h1 class="wp-heading-inline"><?php esc_html_e('Events', 'NetScore Loyalty Rewards'); ?></h1>
+            <h1 class="wp-heading-inline"><?php esc_html_e('Events', 'netscore-loyalty-rewards'); ?></h1>
             <?php if ( ! $this->is_netsuite_customer() ) : ?>
 <a href="#" class="page-title-action lrp-add-event" style="margin-left:12px;">
-<?php esc_html_e('+ Add New Event', 'NetScore Loyalty Rewards'); ?>
+<?php esc_html_e('+ Add New Event', 'netscore-loyalty-rewards'); ?>
 </a>
 <?php endif; ?>
 
@@ -243,13 +243,13 @@ if ( function_exists( 'lrp_is_netsuite_customer' ) ) {
               <!--  <form method="post" enctype="multipart/form-data" style="display:inline-block;margin-left:8px;">
                     <?php wp_nonce_field($this->nonce_action, $this->nonce_name); ?>
                     <input type="file" name="lrp_import_csv" accept=".csv" style="display:inline-block;vertical-align:middle;">
-                   <input type="submit" name="lrp_do_import" class="button" value="<?php esc_attr_e('Import CSV', 'NetScore Loyalty Rewards'); ?>">
+                   <input type="submit" name="lrp_do_import" class="button" value="<?php esc_attr_e('Import CSV', 'netscore-loyalty-rewards'); ?>">
                </form> -->
 
                 <form method="get" action="" style="float:right;">
                     <input type="hidden" name="page" value="lrp-events">
-                    <input type="text" name="s" placeholder="<?php esc_attr_e('Search by name or NSID', 'NetScore Loyalty Rewards'); ?>" value="<?php echo esc_attr($search); ?>" class="regular-text">
-                    <input type="submit" class="button" value="<?php esc_attr_e('Search', 'NetScore Loyalty Rewards'); ?>">
+                    <input type="text" name="s" placeholder="<?php esc_attr_e('Search by name or NSID', 'netscore-loyalty-rewards'); ?>" value="<?php echo esc_attr($search); ?>" class="regular-text">
+                    <input type="submit" class="button" value="<?php esc_attr_e('Search', 'netscore-loyalty-rewards'); ?>">
                 </form>
                 <div style="clear:both;"></div>
             </div>
@@ -257,22 +257,22 @@ if ( function_exists( 'lrp_is_netsuite_customer' ) ) {
             <table class="wp-list-table widefat fixed striped lrp-events-table" style="margin-top:18px;">
                 <thead>
                     <tr>
-                        <th width="100"><?php esc_html_e('ID', 'NetScore Loyalty Rewards'); ?></th>
+                        <th width="100"><?php esc_html_e('ID', 'netscore-loyalty-rewards'); ?></th>
                         <?php if ($show_nsid): ?>
-                        <th width="100"><?php esc_html_e('NSID', 'NetScore Loyalty Rewards'); ?></th>
+                        <th width="100"><?php esc_html_e('NSID', 'netscore-loyalty-rewards'); ?></th>
                         <?php endif; ?>
 
-                        <th width="200"><?php esc_html_e('Event Name', 'NetScore Loyalty Rewards'); ?></th>
-                        <th width="100"><?php esc_html_e('Active', 'NetScore Loyalty Rewards'); ?></th>
+                        <th width="200"><?php esc_html_e('Event Name', 'netscore-loyalty-rewards'); ?></th>
+                        <th width="100"><?php esc_html_e('Active', 'netscore-loyalty-rewards'); ?></th>
                         <?php if (!$show_nsid): ?>
-    <th width="140"><?php esc_html_e('Actions', 'NetScore Loyalty Rewards'); ?></th>
+    <th width="140"><?php esc_html_e('Actions', 'netscore-loyalty-rewards'); ?></th>
 <?php endif; ?>
 
                     </tr>
                 </thead>
                 <tbody>
                     <?php if (empty($rows)): ?>
-                        <tr><td colspan="5"><?php esc_html_e('No events found.', 'NetScore Loyalty Rewards'); ?></td></tr>
+                        <tr><td colspan="5"><?php esc_html_e('No events found.', 'netscore-loyalty-rewards'); ?></td></tr>
                     <?php else: ?>
                         <?php foreach ($rows as $row): ?>
                             <tr data-id="<?php echo esc_attr($row->id); ?>">
@@ -335,23 +335,23 @@ if ( function_exists( 'lrp_is_netsuite_customer' ) ) {
                 <table class="form-table">
                 <?php if ($show_nsid): ?>
                     <tr>
-                        <th><label for="lrp-nsid"><?php esc_html_e('NSID', 'NetScore Loyalty Rewards'); ?></label></th>
+                        <th><label for="lrp-nsid"><?php esc_html_e('NSID', 'netscore-loyalty-rewards'); ?></label></th>
                         <td><input type="text" id="lrp-nsid" name="NSID" class="regular-text"></td>
                     </tr>
                     <?php endif; ?>
 
                     <tr>
-                        <th><label for="lrp-event-name"><?php esc_html_e('Event Name', 'NetScore Loyalty Rewards'); ?> <span style="color:red">*</span></label></th>
+                        <th><label for="lrp-event-name"><?php esc_html_e('Event Name', 'netscore-loyalty-rewards'); ?> <span style="color:red">*</span></label></th>
                         <td><input type="text" id="lrp-event-name" name="event_name" class="regular-text" required></td>
                     </tr>
                     <tr>
-                        <th><?php esc_html_e('Active', 'NetScore Loyalty Rewards'); ?></th>
+                        <th><?php esc_html_e('Active', 'netscore-loyalty-rewards'); ?></th>
                         <td><input type="checkbox" name="is_active" id="lrp-is-active" value="1" checked></td>
                     </tr>
                 </table>
                 <p class="submit">
-                    <button class="button button-primary" id="lrp-save-event" type="button"><?php esc_html_e('Save Event', 'NetScore Loyalty Rewards'); ?></button>
-                    <button class="button lrp-cancel-event" type="button"><?php esc_html_e('Cancel', 'NetScore Loyalty Rewards'); ?></button>
+                    <button class="button button-primary" id="lrp-save-event" type="button"><?php esc_html_e('Save Event', 'netscore-loyalty-rewards'); ?></button>
+                    <button class="button lrp-cancel-event" type="button"><?php esc_html_e('Cancel', 'netscore-loyalty-rewards'); ?></button>
                 </p>
             </form>
         </div>
